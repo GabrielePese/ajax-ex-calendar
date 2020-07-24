@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Calendar</title>
+  </head>
+  <body>
+    <button id="btnIndietro" type="button" name="button"><i class="fas fa-chevron-left"></i></button>
+    <div class="">
+      <h1>Gennaio 2018</h1>
+      <div class="cont">
+
+        <ul class="giorni-mese">
+
+        </ul>
+      </div>
+    </div>
+
+    <button id="btnAvanti"type="button" name="button"><i class="fas fa-chevron-right"></i></button>
+
+    <script id="template" type="text/x-handlebars-template">
+
+    <li data-datecomplete="{{datecomplete}}">{{value}}</li>
+
+    </script>
+  </body>
+</html>

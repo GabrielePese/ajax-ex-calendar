@@ -1,0 +1,20 @@
+ul{
+  list-style: none;
+}
+
+.cont{
+  display: flex;
+  justify-content: center;
+}
+h1{
+  text-align: center;
+}
+.holidays{
+  color: red;
+}
+
+body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
