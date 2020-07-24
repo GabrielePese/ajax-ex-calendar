@@ -11,18 +11,31 @@
 // Controllare quanti giorni ha il mese scelto formando così una lista
 // Chiedere all'api quali sono le festività per il mese scelto
 // Evidenziare le festività nella lista
+var mese = 1
 function tastoAvanti (currentMonth){
     var btnTarget = $("#btnAvanti");
     btnTarget.click(function (){
-      var mese = 01
-      var meseClick = mese + 1
+
+      var meseClick = mese += 1
       var currentMonth = moment("2018-"+(meseClick)+"-01");
       var daysInMonth = currentMonth.daysInMonth()
-      console.log(daysInMonth);
-      console.log(currentMonth);
       printMonth (currentMonth)
+      printHoliday(currentMonth)
     })
     }
+
+    function tastoIndietro (currentMonth){
+      var btnIndietroTarget = $('#btnIndietro')
+      btnIndietroTarget.click(function () {
+        var meseClick2 = mese -= 1
+        var currentMonth = moment("2018-"+(meseClick2)+"-01");
+        var daysInMonth = currentMonth.daysInMonth()
+        printMonth (currentMonth)
+        printHoliday(currentMonth)
+      })
+    }
+
+
 
 
 function printMonth (currentMonth){
@@ -78,6 +91,7 @@ function printHoliday(currentMonth){
    printMonth(currentMonth)
    printHoliday(currentMonth)
    tastoAvanti()
+   tastoIndietro()
  }
 
 
