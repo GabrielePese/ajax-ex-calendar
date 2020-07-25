@@ -18,3 +18,12 @@ body{
   justify-content: space-between;
   align-items: center;
 }
+
+.mesi h1{
+  display: none;
+}
+
+
+.mesi h1.active{
+  display: block;
+}

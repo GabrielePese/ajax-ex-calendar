@@ -15,25 +15,47 @@ var mese = 1
 function tastoAvanti (currentMonth){
     var btnTarget = $("#btnAvanti");
     btnTarget.click(function (){
-
       var meseClick = mese += 1
       var currentMonth = moment("2018-"+(meseClick)+"-01");
       var daysInMonth = currentMonth.daysInMonth()
       printMonth (currentMonth)
       printHoliday(currentMonth)
+
+      var tgtMese = $("h1.active")
+      tgtMese.removeClass("active")
+      tgtMese.next().addClass("active")
+
+
+      if (tgtMese.hasClass("last")){
+        alert("Puoi guardare solo il 2018")
+
+      }
+
     })
     }
+
+
 
     function tastoIndietro (currentMonth){
       var btnIndietroTarget = $('#btnIndietro')
       btnIndietroTarget.click(function () {
-        var meseClick2 = mese -= 1
-        var currentMonth = moment("2018-"+(meseClick2)+"-01");
+        var meseClick = mese -= 1
+        var currentMonth = moment("2018-"+(meseClick)+"-01");
         var daysInMonth = currentMonth.daysInMonth()
         printMonth (currentMonth)
         printHoliday(currentMonth)
+
+        var tgtMese = $("h1.active")
+        tgtMese.removeClass("active")
+        tgtMese.prev().addClass("active")
+
+        if (tgtMese.hasClass("first")){
+          alert("Puoi guardare solo il 2018")
+
+        }
       })
     }
+
 
 
 
@@ -92,6 +114,7 @@ function printHoliday(currentMonth){
    printHoliday(currentMonth)
    tastoAvanti()
    tastoIndietro()
+   cambiaMeseScritta()
  }
 
 
